@@ -120,7 +120,6 @@ body {font-size:16px;}
         <li class="w3-padding-16">Basic knowledge of Computer Server Configuration, Cloud Computing and Data Science</li>
         <li class="w3-padding-16">Experienced in Software testing and audit quality assurance for software document</li>
         <li class="w3-padding-16">Good knowledge of Photoshop and Premiere Pro</li>
-
       </ul>
     </div>
   </div>
@@ -161,10 +160,13 @@ body {font-size:16px;}
 
     <!-- CRUD -->
     <div class="w3-container" id="contact" style="margin-top:75px">
-        <h1 class="w3-xxxlarge w3-text-red"><b>My CRUD</b></h1>
-        
-        <a href="/posts/create" class="button ">Add Post</a>
-
+        <div class="w3-row-padding">
+        <div class="w3-half">
+            <h1 class="w3-xxxlarge w3-text-red w3-margin-bottom"><b>My CRUD</b></h1>
+        </div>
+        <div class="w3-half w3-margin-bottom w3-padding-32">
+            <a href="/posts/create" class="button ">Add Post</a>
+        </div>
         @foreach($posts as $post)
             <article class="mb-2">
                 <a href="/posts/{{ $post->id }}/edit" class="text-xl font-bold text-blue-500">{{ $post->title }}</a>
@@ -176,12 +178,8 @@ body {font-size:16px;}
     </div>
 
 
-
 <!-- End page content -->
 </div>
-
-<!-- W3.CSS Container -->
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a title="Natnicha" target="_blank" class="w3-hover-opacity">Natnicha Chuenchitpisaikul</a></p></div>
 
 <script>
 // Script to open and close sidebar
