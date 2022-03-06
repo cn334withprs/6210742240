@@ -156,8 +156,6 @@ body {font-size:16px;}
         @endforeach
     </div>
 
-
-
   <!-- Contact -->
   <div class="w3-container" id="contact" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
@@ -169,7 +167,6 @@ body {font-size:16px;}
     <p><i class="fa fa-linkedin-square fa-fw w3-xxlarge w3-margin-right"> </i>www.linkedin.com/in/ NatnichaChuenchit</p>
   </div>
 
-    
 <!-- End page content -->
 </div>
 

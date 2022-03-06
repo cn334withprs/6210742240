@@ -33,7 +33,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
             @csrf
 
             <div class="mb-10">
-                <label class="font-bold text-gray-800" for="title">Title: </label>
+                <label class="font-bold text-gray-800" for="title">Year: </label>
                 <div class="mb-4"></div>
                 <input class="h-10 bg-white border border-gray-300 rounded py-4 px-3 mr-4 w-full text-gray-600 text-sm focus:outline-none focus:border-gray-400 focus:ring-0" id="title" name="title" value="{{ $post->title }}">
             </div>
@@ -62,10 +62,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         
         <div class="w3-container w3-margin">
         </div>
-
         </form>
   </div>
-
 </div>
 
 <div class="mb-20"></div>

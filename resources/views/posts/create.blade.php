@@ -30,9 +30,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <div style="width: 900px;" class="container max-w-full mx-auto pt-20">
         <form method="POST" action="/posts">
             @csrf
-
             <div class="mb-10">
-                <label class="font-bold text-gray-800" for="title">Title: </label>
+                <label class="font-bold text-gray-800" for="title">Year: </label>
                 <div class="mb-4"></div>
                 <input class="h-10 bg-white border border-gray-300 rounded py-4 px-3 mr-4 w-full text-gray-600 text-sm focus:outline-none focus:border-gray-400 focus:ring-0" id="title" name="title">
             </div>
