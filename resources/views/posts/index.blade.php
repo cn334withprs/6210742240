@@ -46,6 +46,7 @@ body {font-size:16px;}
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
     <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Me</a> 
     <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Skills</a> 
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Education</a>
     <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Activities</a> 
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
   </div>
@@ -137,14 +138,24 @@ body {font-size:16px;}
   
   <!-- Activities -->
   <div class="w3-container" id="packages" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Activities.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <h3>2019</h3>
-    <li class="w3-padding-16">Volunteer activities to renovate and paint for Thammasat kindergarten toilets</li>
-    <li class="w3-padding-16">Volunteer activities about future career for elementary school</li>
-    <h3>2021</h3>
-    <li class="w3-padding-16">Attended sales engineer seminar by Mr. chovarit</li>
-  </div>
+        <div class="w3-row-padding">
+        <div class="w3-half">
+            <h1 class="w3-xxxlarge w3-text-red w3-margin-bottom"><b>Activities.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+        </div>
+        <div class="w3-half w3-margin-bottom w3-padding-48">
+            <a href="/posts/create" class="button ">Add Activities</a>
+        </div>
+        @foreach($posts as $post)
+            <article class="mb-2">
+                <a href="/posts/{{ $post->id }}/edit" class="w3-xlarge font-bold text-blue-500">{{ $post->title }}</a>
+                <p class="w3-large text-gray-600">{!! nl2br(e($post->content))!!}</p>
+
+                <hr class="mt-2">
+            </article>
+        @endforeach
+    </div>
+
 
 
   <!-- Contact -->
@@ -158,28 +169,13 @@ body {font-size:16px;}
     <p><i class="fa fa-linkedin-square fa-fw w3-xxlarge w3-margin-right"> </i>www.linkedin.com/in/ NatnichaChuenchit</p>
   </div>
 
-    <!-- CRUD -->
-    <div class="w3-container" id="contact" style="margin-top:75px">
-        <div class="w3-row-padding">
-        <div class="w3-half">
-            <h1 class="w3-xxxlarge w3-text-red w3-margin-bottom"><b>My CRUD</b></h1>
-        </div>
-        <div class="w3-half w3-margin-bottom w3-padding-32">
-            <a href="/posts/create" class="button ">Add Post</a>
-        </div>
-        @foreach($posts as $post)
-            <article class="mb-2">
-                <a href="/posts/{{ $post->id }}/edit" class="text-xl font-bold text-blue-500">{{ $post->title }}</a>
-                <p class="text-md text-gray-600">{{ $post->content }}</p>
-
-                <hr class="mt-2">
-            </article>
-        @endforeach
-    </div>
-
-
+    
 <!-- End page content -->
 </div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a title="Natnicha" target="_blank" class="w3-hover-opacity">Natnicha Chuenchitpisaikul</a></p></div>
+
 
 <script>
 // Script to open and close sidebar
@@ -191,7 +187,7 @@ function w3_open() {
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
-}
+}  
 
 // Modal Image Gallery
 function onClick(element) {
